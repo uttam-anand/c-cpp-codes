@@ -32,6 +32,19 @@ class Solution {
                return root;
            }
         }
+/*
+class Node {
+    public:
+        int data;
+        Node *left;
+        Node *right;
+        Node(int d) {
+            data = d;
+            left = NULL;
+            right = NULL;
+        }
+};
+*/
 
 void levelOrder(Node * root)
 {
@@ -61,3 +74,22 @@ if (root == NULL)  return;
 }
 
 }; //End of Solution
+
+int main() {
+  
+    Solution myTree;
+    Node* root = NULL;
+    
+    int t;
+    int data;
+
+    std::cin >> t;
+
+    while(t-- > 0) {
+        std::cin >> data;
+        root = myTree.insert(root, data);
+    }
+  
+	myTree.levelOrder(root);
+    return 0;
+}
